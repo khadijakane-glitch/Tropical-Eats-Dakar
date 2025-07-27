@@ -63,7 +63,7 @@
       <label class="block mb-4 font-semibold text-textDark">Mot de passe
         <input type="password" id="password" autocomplete="current-password" required class="border border-gray-300 rounded w-full p-2" />
       </label>
-      <button type="submit" class="w-full bg-primary text-white font-semibold py-3 rounded hover:bg-darkGreen transition">Se connecter</button>
+      <button type="submit" class="w-full bg-primary text-black font-semibold py-3 rounded hover:bg-darkGreen transition">Se connecter</button>
     </form>
   </section>
 
@@ -103,7 +103,7 @@
         <label for="new-category-input" class="font-semibold">Ajouter une catégorie</label>
         <div class="flex gap-2 mb-4 max-w-md">
           <input id="new-category-input" type="text" placeholder="Nom de la catégorie" class="border rounded p-2 w-full" />
-          <button id="add-category-btn" class="bg-primary text-white rounded px-4 py-2 hover:bg-darkGreen transition font-semibold">Ajouter</button>
+          <button id="add-category-btn" class="bg-primary text-black rounded px-4 py-2 hover:bg-darkGreen transition font-semibold">Ajouter</button>
         </div>
       </div>
 
@@ -112,7 +112,7 @@
       <div id="category-selected" class="mb-6 font-semibold text-lg"></div>
 
       <table class="w-full border border-gray-300 border-collapse">
-        <thead class="bg-primary text-white">
+        <thead class="bg-primary text-black">
           <tr>
             <th class="border border-gray-300 p-2">Nom</th>
             <th class="border border-gray-300 p-2 w-72">Description</th>
@@ -125,11 +125,11 @@
         <tbody id="products-table-body" class="bg-white"></tbody>
       </table>
 
-      <button id="add-product-btn" class="mt-4 bg-secondary hover:bg-yellow-400 text-white px-4 py-2 rounded font-semibold transition">Ajouter un produit</button>
+      <button id="add-product-btn" class="mt-4 bg-secondary hover:bg-yellow-400 text-black px-4 py-2 rounded font-semibold transition">Ajouter un produit</button>
 
       <div class="mt-6 flex justify-end gap-4 max-w-xl mx-auto">
-        <button id="save-products-btn" class="bg-primary hover:bg-darkGreen text-white px-6 py-2 rounded font-semibold transition">Sauvegarder</button>
-        <button id="discard-products-btn" class="bg-gray-400 hover:bg-gray-500 text-white px-6 py-2 rounded font-semibold transition">Annuler</button>
+        <button id="save-products-btn" class="bg-primary hover:bg-darkGreen text-black px-6 py-2 rounded font-semibold transition">Sauvegarder</button>
+        <button id="discard-products-btn" class="bg-gray-400 hover:bg-gray-500 text-black px-6 py-2 rounded font-semibold transition">Annuler</button>
       </div>
     </div>
 
@@ -137,7 +137,7 @@
     <div id="clients-view" class="hidden text-textDark overflow-auto max-h-[70vh]">
       <h2 class="text-2xl font-bold mb-6 text-brand">Clients & Utilisateurs</h2>
       <table class="w-full border-collapse border border-gray-300 mb-4">
-        <thead class="bg-primary text-white">
+        <thead class="bg-primary text-black">
           <tr>
             <th class="border border-gray-300 p-2">Nom</th>
             <th class="border border-gray-300 p-2">Email</th>
@@ -238,7 +238,7 @@
         <td class="border p-2 text-textDark">${cliente.name}</td>
         <td class="border p-2 text-textDark">${cliente.email}</td>
         <td class="border p-2 text-textDark">${cliente.lastOrder || '-'}</td>
-        <td class="border p-2"><button onclick="removeClient('${cliente.email}')" class="bg-red-600 hover:bg-red-700 text-white rounded px-2 py-1 font-semibold">Supprimer</button></td>
+        <td class="border p-2"><button onclick="removeClient('${cliente.email}')" class="bg-red-600 hover:bg-red-700 text-black rounded px-2 py-1 font-semibold">Supprimer</button></td>
       `;
       tbody.appendChild(tr);
     });
@@ -306,7 +306,7 @@
     categoriesListEl.innerHTML = '';
     categoriesLocal.forEach((cat, idx) => {
       const btn = document.createElement('button');
-      btn.className = 'bg-primary text-white rounded-full px-5 py-2 font-semibold transition hover:bg-darkGreen select-none';
+      btn.className = 'bg-primary text-black rounded-full px-5 py-2 font-semibold transition hover:bg-darkGreen select-none';
       if(currentCategoryIndex === idx) btn.classList.add('bg-darkGreen');
       btn.textContent = cat.name;
       btn.onclick = () => selectCategory(idx);
@@ -337,7 +337,7 @@
         <td class="border border-gray-300 p-2"><input type="number" min="0" data-index="${i}" class="w-full border rounded px-2 py-1 text-right" value="${prod.stock}"></td>
         <td class="border border-gray-300 p-2"><input type="url" data-index="${i}" class="w-full border rounded px-2 py-1" value="${prod.image || ''}"></td>
         <td class="border border-gray-300 p-2 text-center">
-          <button data-index="${i}" class="bg-red-600 hover:bg-red-700 text-white rounded px-3 py-1 font-semibold">Supprimer</button>
+          <button data-index="${i}" class="bg-red-600 hover:bg-red-700 text-black rounded px-3 py-1 font-semibold">Supprimer</button>
         </td>`;
       productsTableBody.appendChild(tr);
     });
